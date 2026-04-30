@@ -18,9 +18,7 @@
 
 ## Demo
 
-```markdown
 ![模板预览](demo.png)
-```
 
 ## 许可证
 
