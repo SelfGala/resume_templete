@@ -1,0 +1,181 @@
+\documentclass[a4paper,10pt]{article}
+
+% 引入 ctex 宏包以支持中文，推荐使用 XeLaTeX 编译
+\usepackage[UTF8]{ctex}
+
+\usepackage{latexsym}
+% 使用 geometry 宏包严格控制页边距
+\usepackage[left=0.5in,right=0.5in,top=0.35in,bottom=0.35in]{geometry}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting - 调整为适中的负间距避免重叠
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-4pt}]
+
+%-------------------------
+% 优化后的自定义命令
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-1pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    % 使用 \linewidth 替代 \textwidth 避免左右溢出重叠
+    \begin{tabular*}{\linewidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-20pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+% 统一调整外层列表环境
+\newcommand{\resumeSubHeadingListStart}{
+  \begin{itemize}[leftmargin=0.15in, label={}, itemsep=0pt, parsep=0pt, topsep=0pt]
+}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{-12pt}}
+
+% 统一调整内层列表环境
+\newcommand{\resumeItemListStart}{
+  \begin{itemize}[leftmargin=0.2in, itemsep=0pt, parsep=0pt, topsep=0pt]
+}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-1pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING-----------------
+\vspace*{-10pt}
+\begin{center}
+  {\huge \textbf{姓名}} \\[4pt]
+  \small
+  电话: +86-13800000000 \hspace{2em}
+  Email: {your email@example.com} \hspace{2em}
+  GitHub: {your-github-id}
+\end{center}
+
+\vspace{-20pt}
+
+%-----------EDUCATION-----------------
+\section{教育经历}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {示例大学 A (Example University A)}{2022.9 - 2026.6}
+      {B.E. | 机械工程}{GPA: 3.9/4.3}
+    \resumeSubheading
+      {示例大学 B (Example University B)}{2024.7 - 2025.1}
+      {交换学习 | 机械工程}{GPA: 3.8/4.0}
+    \resumeSubheading
+      {示例大学 A (Example University A)}{2026.9 (拟入学)}
+      {Ms.Eng | 机械工程}{导师: XXX 教授}
+  \resumeSubHeadingListEnd
+
+\section{工作及实习经历}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {某某科技有限公司（示例）}{2025.12 - 2026.4}
+      {机器人自动化工程师（实习）}{实习内容}
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------------
+\section{论文及在投}
+  \resumeSubHeadingListStart
+    \item[{[1]}] Example Paper Title A: Placeholder Subtitle for Open-Source Template \\
+      作者A, 作者B, \textbf{你的姓名（示例）}, 作者C* \\
+      \textbf{Under Review} \textit{Target Journal / Conference}
+    \vspace{-2pt}
+    \item[{[2]}] Example Paper Title B: Placeholder Subtitle for Open-Source Template \\
+      作者D, \textbf{你的姓名（示例）}, 作者E, 作者F* \\
+      \textbf{In Preparation} \textit{Target Conference}
+  \resumeSubHeadingListEnd
+
+\section{科研与项目经历}
+  \resumeSubHeadingListStart
+
+    % ---- 原创科研项目（示例） ----
+    \resumeSubheading
+      {智能感知与控制研究项目（示例）}{某实验室 / 某高校}
+      {导师：XXX 教授}{2026.1 - 2026.4}
+      \resumeItemListStart
+        \item[\textbullet] 参与课题方案设计与实验流程搭建，围绕核心目标完成阶段性验证工作。
+        \item[\textbullet] 负责模块联调与结果分析，持续优化实验表现并沉淀可复用流程。
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {机器人学习与任务执行研究项目（示例）}{某智能实验室}
+      {导师：YYY 教授}{2025.5 - 2025.9}
+      \resumeItemListStart
+        \item[\textbullet] 负责数据整理与实验支持工作，保障项目在既定周期内稳定推进。
+        \item[\textbullet] 协助完成系统方案迭代与性能评估，推动任务执行效果持续改进。
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {多智能体感知与决策研究项目（示例）}{学术训练项目}
+      {导师：ZZZ 教授}{2023.7 - 2024.1}
+      \resumeItemListStart
+        \item[\textbullet] 参与数据采集与标注流程建设，支持项目所需数据资产的持续积累。
+        \item[\textbullet] 完成基础数据处理与结果整理，为后续研究与决策分析提供支撑。
+      \resumeItemListEnd
+
+    % ---- 技术复现项目（示例） ----
+    \resumeSubheading
+      {机器人策略方法复现项目 A（示例）}{某高校}
+      {独立复现}{2026.1 - 2026.4}
+      \resumeItemListStart
+        \item[\textbullet] 依据公开资料完成方法复现与实验对照，验证关键流程可行性。
+        \item[\textbullet] 针对执行过程中的问题进行调参与排障，提升整体稳定性与可复现性。
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {机器人策略方法复现项目 B（示例）}{某高校}
+      {独立复现}{2026.1 - 2026.4}
+      \resumeItemListStart
+        \item[\textbullet] 完成另一类公开方法的复现与基础测试，形成可复用的实验记录。
+        \item[\textbullet] 结合任务表现进行模块优化与对比分析，输出阶段性总结与改进建议。
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+\section{荣誉与奖励\hfill 个人评价\hspace*{17em}}
+\vspace{2pt}
+\noindent
+\begin{minipage}[t]{0.48\linewidth}
+  \vspace{2pt}
+  \begin{itemize}[leftmargin=0.16in, itemsep=0pt, parsep=0pt, topsep=1pt]
+    \item 学校奖学金（示例） \hfill 2025年
+    \item 学科竞赛奖项（示例） \hfill 2024年
+    \item 志愿服务荣誉（示例） \hfill 2023年
+  \end{itemize}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.48\linewidth}
+  \vspace{3pt}
+
+  \small 这里填写你的个人评价（模板占位）：例如科研执行力、工程落地能力、协作能力与学习能力等。
+\end{minipage}
+
+\end{document}
