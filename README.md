@@ -18,7 +18,7 @@
 
 ## Demo
 
-<img src="demo.png" alt="模板预览" width="40%" />
+<img src="demo.png" alt="模板预览" width="60%" />
 
 ## 许可证
 
