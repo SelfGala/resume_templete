@@ -9,9 +9,10 @@
 \usepackage{titlesec}
 \usepackage{marvosym}
 \usepackage[usenames,dvipsnames]{color}
+\definecolor{qiushiblue}{RGB}{0,63,136}
 \usepackage{verbatim}
 \usepackage{enumitem}
-\usepackage[pdftex]{hyperref}
+\usepackage[colorlinks=true, urlcolor=qiushiblue, pdfborder={0 0 0}, pdftex]{hyperref}
 \usepackage{fancyhdr}
 
 \pagestyle{fancy}
@@ -40,12 +41,12 @@
 }
 
 \newcommand{\resumeSubheading}[4]{
-  \vspace{-1pt}\item
+  \vspace{-3pt}\item
     % 使用 \linewidth 替代 \textwidth 避免左右溢出重叠
     \begin{tabular*}{\linewidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
+      \textbf{#1} & #2 \\[-2pt]
       \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-4pt}
+    \end{tabular*}\vspace{-8pt}
 }
 
 \newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-20pt}}
@@ -62,7 +63,7 @@
 \newcommand{\resumeItemListStart}{
   \begin{itemize}[leftmargin=0.2in, itemsep=0pt, parsep=0pt, topsep=0pt]
 }
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-1pt}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{3pt}}
 
 %-------------------------------------------
 %%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -75,8 +76,8 @@
   {\huge \textbf{姓名}} \\[4pt]
   \small
   电话: +86-13800000000 \hspace{2em}
-  Email: {your email@example.com} \hspace{2em}
-  GitHub: {your-github-id}
+  Email: \href{mailto:your@email.com}{your@email.com} \hspace{2em}
+  GitHub: {\href{https://github.com/your-github-id}{\color{qiushiblue}your-github-id}}
 \end{center}
 
 \vspace{-20pt}
@@ -95,29 +96,32 @@
       {Ms.Eng | 机械工程}{导师: XXX 教授}
   \resumeSubHeadingListEnd
 
+\vspace{6pt}
 \section{工作及实习经历}
   \resumeSubHeadingListStart
     \resumeSubheading
       {某某科技有限公司（示例）}{2025.12 - 2026.4}
       {机器人自动化工程师（实习）}{实习内容}
   \resumeSubHeadingListEnd
+\vspace{7pt}
 
 %-----------PROJECTS-----------------
 \section{论文及在投}
   \resumeSubHeadingListStart
-    \item[{[1]}] Example Paper Title A: Placeholder Subtitle for Open-Source Template \\
+    \item[{\textbf{[1]}}] Example Paper Title A: Placeholder Subtitle for Open-Source Template \\
       作者A, 作者B, \textbf{你的姓名（示例）}, 作者C* \\
       \textbf{Under Review} \textit{Target Journal / Conference}
     \vspace{-2pt}
-    \item[{[2]}] Example Paper Title B: Placeholder Subtitle for Open-Source Template \\
+    \item[{\textbf{[2]}}] Example Paper Title B: Placeholder Subtitle for Open-Source Template \\
       作者D, \textbf{你的姓名（示例）}, 作者E, 作者F* \\
       \textbf{In Preparation} \textit{Target Conference}
   \resumeSubHeadingListEnd
 
-\section{科研与项目经历}
+%-----------科研经历-----------------
+\vspace{-2pt}
+\section{科研经历}
   \resumeSubHeadingListStart
 
-    % ---- 原创科研项目（示例） ----
     \resumeSubheading
       {智能感知与控制研究项目（示例）}{某实验室 / 某高校}
       {导师：XXX 教授}{2026.1 - 2026.4}
@@ -142,24 +146,40 @@
         \item[\textbullet] 完成基础数据处理与结果整理，为后续研究与决策分析提供支撑。
       \resumeItemListEnd
 
-    % ---- 技术复现项目（示例） ----
+  \resumeSubHeadingListEnd
+
+%-----------项目经历-----------------
+\vspace{-2pt}
+\section{项目经历}
+  \resumeSubHeadingListStart
+
     \resumeSubheading
-      {机器人策略方法复现项目 A（示例）}{某高校}
-      {独立复现}{2026.1 - 2026.4}
+      {\href{https://example.com}{\color{qiushiblue}机器人策略方法复现项目 A（示例）}}{某高校}
+      {项目复现}{2026.1 - 2026.4}
       \resumeItemListStart
         \item[\textbullet] 依据公开资料完成方法复现与实验对照，验证关键流程可行性。
         \item[\textbullet] 针对执行过程中的问题进行调参与排障，提升整体稳定性与可复现性。
       \resumeItemListEnd
 
     \resumeSubheading
-      {机器人策略方法复现项目 B（示例）}{某高校}
-      {独立复现}{2026.1 - 2026.4}
+      {\href{https://example.com}{\color{qiushiblue}机器人策略方法复现项目 B（示例）}}{某高校}
+      {项目复现}{2026.1 - 2026.4}
       \resumeItemListStart
         \item[\textbullet] 完成另一类公开方法的复现与基础测试，形成可复用的实验记录。
         \item[\textbullet] 结合任务表现进行模块优化与对比分析，输出阶段性总结与改进建议。
       \resumeItemListEnd
 
+    \resumeSubheading
+      {课程实践项目（示例）}{某高校 / 某课程}
+      {课程项目}{2025.2 - 2025.3}
+      \resumeItemListStart
+        \item[\textbullet] 完成课程核心任务的设计与实现，包括理论推导、仿真验证与实验调试。
+        \item[\textbullet] 基于结果分析提出优化方向，完整呈现项目执行与闭环总结能力。
+      \resumeItemListEnd
+
   \resumeSubHeadingListEnd
+
+\vspace{-3pt}
 
 \section{荣誉与奖励\hfill 个人评价\hspace*{17em}}
 \vspace{2pt}
